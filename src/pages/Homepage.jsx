@@ -14,6 +14,11 @@ export default function Homepage() {
           className={styles.backgroundImage}
         />
       </picture>
+      <div className={styles.overlay}></div>
+      <section>
+        <img src="../assets/logo.png"></img>
+        <button>Sign up</button>
+      </section>
     </main>
   );
 }
