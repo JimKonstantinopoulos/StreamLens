@@ -1,14 +1,23 @@
 import "./App.module.css";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Homepage from "./pages/Homepage";
-import Login from "./pages/Login";
+import Greet from "./components/Greet";
+import Login from "./components/Login";
+import SignUp from "./components/Signup";
+import AppLayout from "./pages/AppLayout";
+import PageNotFound from "./pages/PageNotFound";
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Homepage />} />
-        <Route path="login" element={<Login />} />
+        <Route path="/" element={<Homepage />}>
+          <Route index element={<Greet />} />
+          <Route path="login" element={<Login />} />
+          <Route path="signup" element={<SignUp />} />
+        </Route>
+        <Route path="app" element={<AppLayout />} />
+        <Route path="*" element={<PageNotFound />} />
       </Routes>
     </BrowserRouter>
   );

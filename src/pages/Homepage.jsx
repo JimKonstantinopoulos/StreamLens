@@ -1,5 +1,5 @@
-import { Link } from "react-router-dom";
 import styles from "./Homepage.module.css";
+import { Outlet } from "react-router-dom";
 
 export default function Homepage() {
   return (
@@ -16,12 +16,7 @@ export default function Homepage() {
         />
       </picture>
       <div className={styles.overlay}></div>
-      <section>
-        <img src="../assets/logo.png"></img>
-        <Link to="/login" className={styles.cta}>
-          Sign up
-        </Link>
-      </section>
+      <Outlet />
     </main>
   );
 }
