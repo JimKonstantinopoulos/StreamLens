@@ -4,7 +4,7 @@ import Homepage from "./pages/Homepage";
 import Greet from "./components/Greet";
 import Login from "./components/Login";
 import SignUp from "./components/Signup";
-import AppLayout from "./pages/AppLayout";
+import ContentPage from "./pages/ContentPage";
 import PageNotFound from "./pages/PageNotFound";
 
 function App() {
@@ -16,7 +16,7 @@ function App() {
           <Route path="login" element={<Login />} />
           <Route path="signup" element={<SignUp />} />
         </Route>
-        <Route path="app" element={<AppLayout />} />
+        <Route path="app" element={<ContentPage />} />
         <Route path="*" element={<PageNotFound />} />
       </Routes>
     </BrowserRouter>
